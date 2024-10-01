@@ -1,0 +1,92 @@
+[
+ {
+   "id": 1,
+   "class": "title",
+   "paragraph": "<h1 id=\"evt\">ground zero</h1> <h2>by Reese Hausman</h2>",
+   "image": ""
+ },
+ {
+   "id": 2,
+   "class": "text",
+   "paragraph": "<p id=\"one\">On the pavement outside his favorite bar, Gavin tries to feel the bones in his hand. Just by holding it there, limply suspended in the air. A meditation video he watched suggested it as a grounding technique. The present moment is supposed to teach him what it feels like to be real, or something.</p>",
+   "image": "<a class=\"imgOneWrap\"><img src=\"https://github.com/reeserocks/ground-zero/blob/main/images/two.jpg?raw=true\" class=\"img1\"></img> <img src=\"https://github.com/reeserocks/ground-zero/blob/main/images/twoHover.jpg?raw=true\" class=\"img1hover\" id=\"evt\"></img></a>"
+ },
+ {
+   "id": 3,
+   "class": "text",
+   "paragraph": "<p id=\"two\">There’s a nasty rock digging into his back but he tries to pay it no mind. He is the reeds blowing in the wind, he is the water’s surface. Stress in his body melts like butter on a hot pan. His fingers curl into his <a id=\"evt\">palm </a> on their own accord.</p>",
+   "image": "<img src=\"https://github.com/reeserocks/ground-zero/blob/main/images/three.gif?raw=true\" class=\"img2\"></img>"
+ },
+ {
+   "id": 4,
+   "class": "text",
+   "paragraph": "<p id=\"three\">No matter how hard he concentrates, though, he can’t tell how deep his flesh goes. If Nieves were here, he could probably get him mad enough to crunch his hand into the ground. Then he would really feel it.</p>",
+   "image": "<img src=\"https://github.com/reeserocks/ground-zero/blob/main/images/four.png?raw=true\" class=\"img3\" id=\"evt\"></img>"
+ },
+ {
+   "id": 5,
+   "class": "text",
+   "paragraph": "<p id=\"four\">The bar’s backdoor opens and <a id=\"evt\">someone</a> with black shoes steps out.</p>",
+   "image": "<img src=\"https://github.com/reeserocks/ground-zero/blob/main/images/five.png?raw=true\" class=\"img4\"></img>"
+ },
+ {
+   "id": 6,
+   "class": "dialogue",
+   "paragraph": "<p class=\"ira\" id=\"evt\">\"Gavin?\"</p>",
+   "image": ""
+ },
+ {
+   "id": 7,
+   "class": "text",
+   "paragraph": "<p id=\"six\">an incredulous voice asks. It sounds like the owner, who Gavin is mildly friends with for frequenting his establishment so often. He has the decency to at least push himself up to his elbows.</p>",
+   "image": "<img src=\"https://github.com/reeserocks/ground-zero/blob/main/images/gav.jpg?raw=true\" class=\"gav\" id=\"evt\"></img>"
+ },
+ {
+   "id": 8,
+   "class": "dialogue",
+   "paragraph": "<p id=\"seven\" class=\"gavin\"><a id=\"evt\">\"Yo, Ira.”</a></p>",
+   "image": ""
+ },
+ {
+   "id": 9,
+   "class": "text",
+   "paragraph": "<img src=\"https://github.com/reeserocks/ground-zero/blob/main/images/ira.jpg?raw=true\" class=\"ira\"></img> <p id=\"eight\"><a class=\"ira\">“What on earth are you doing out here, man? Come inside before you freeze to death,”</a></p> <p class=\"outside\">Ira says, leaning back against the open door.</p>",
+   "image": "<img src=\"https://github.com/reeserocks/ground-zero/blob/main/images/gav.jpg?raw=true\" class=\"gav\" id=\"evt\"></img>"
+ },
+ {
+   "id": 10,
+   "class": "text",
+   "paragraph": "<p id=\"nine\"><a class=\"gavin\">“I’m sober now,”</a></p> <p class=\"outside\">he laments.</p>",
+   "image": "<img src=\"https://github.com/reeserocks/ground-zero/blob/main/images/ira.jpg?raw=true\" class=\"ira\" id=\"evt\"></img>"
+ },
+ {
+   "id": 11,
+   "class": "text",
+   "paragraph": "<p id=\"ten\"><a class=\"ira\">“Jesus,”</a> <p class=\"outside\">Ira says, raising his eyebrows.</p> <p class=\"iraSecond\">“Well, that explains… all this. You’re doing good, though?”</a></p>",
+   "image": "<img src=\"https://github.com/reeserocks/ground-zero/blob/main/images/ira.jpg?raw=true\" class=\"gav\" id=\"evt\"></img>"
+ },
+ {
+   "id": 12,
+   "class": "text",
+   "paragraph": "<p id=\"eleven\"><a class=\"right\">Gavin scratches his chin.</a> <br> <a class=\"left\">Ira cuts him off before he can say anything.</a></p>",
+   "image": "<img src=\"https://github.com/reeserocks/ground-zero/blob/main/images/ira.jpg?raw=true\" class=\"ira\" id=\"evt\"></img>"
+ },
+ {
+   "id": 13,
+   "class": "text",
+   "paragraph": "<p id=\"twelve\" class=\"ira\">“Actually, don’t answer that. You need to go <a id=\"evt\">home</a>, Gavin. I already got enough to deal with on a Saturday night, I don’t need a poor unfortunate soul haunting my parking lot.”</p>",
+   "image": ""
+ },
+ {
+   "id": 14,
+   "class": "text",
+   "paragraph": "<p id=\"thirteen\">The wake-up call is unwelcome, but Ira’s probably right. So he walks home and hopes someone will try to abduct him, but <a id=\"evt\">no one does.</a></p>",
+   "image": "<img src=\"https://github.com/reeserocks/ground-zero/blob/main/images/fourteen.jpg?raw=true\" class=\"img13\"></img>"
+ },
+ {
+   "id": 15,
+   "class": "text",
+   "paragraph": "<p id=\"fourteen\">A cold shower works to get his head in a better place. And then he does three crosswords and passes out on the couch, and it's not as good as self-destruction, but he feels like a human again.</p>",
+   "image": "<img src=\"https://github.com/reeserocks/ground-zero/blob/main/images/fifteen.png?raw=true\" class=\"img14\"></img>"
+ }
+]
