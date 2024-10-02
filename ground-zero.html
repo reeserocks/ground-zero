@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ground zero</title>
+  <link href="groundZero.css" rel="stylesheet">
+
+  <!--fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Podkova:wght@400..800&family=Stylish&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="title">
+    <h1 id="evt">ground zero</h1> 
+    <h2>an interactive excerpt by reese hausman</h2>
+  </div>
+  <div class="container">
+    <div class="content"></div>
+    <div id="comments" class="hidden">
+      <!--
+      <h3>Comments</h3>
+      <form>
+        <input type="text" name="username" id="username" placeholder="Type your nickname here...">
+        <br>
+        <input type="text" name="textfield" id="textfield" placeholder="Type your comment...">
+        <br>
+        <input type="submit" id="submit" value="Submit">
+      </form>
+      <div id="commentsList"></div>
+      -->
+      <p id="end">Thank you for reading.</p>
+      <a id="socials" href="https://reese-hausman.carrd.co" target="_blank">my carrd</a>
+    </div>
+</div>
+
+<script>
+  //PAGES
+  const h1 = document.querySelector("h1");
+  const evt = document.querySelector("#evt");
+  const content = document.querySelector('.content');
+
+  //FORM
+  const commentsList = document.querySelector("#commentsList");
+  const form = document.querySelector("form");
+  const username_input = document.getElementById("username");
+  const textfield_input = document.getElementById("textfield");
+  const comments = document.querySelector("#comments");
+  let k = 0;
+
+  //PAGES
+  let pages = [];
+
+  let myIndex = 0;
+
+  //FORM
+  let username = '';
+  let textfield = '';
+  let list = [];
+
+  //FADE-IN EFFECT
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+
+  //PAGES
+  const getWriting = async () => {
+    const url = "https://raw.githubusercontent.com/reeserocks/ground-zero/refs/heads/main/writing.json";
+    
+    const response = await fetch(url);
+    const data = await response.json();
+    pages = [...data];
+  }
+  
+  const addPage = () => {
+    const item = pages[myIndex];
+    const div = document.createElement("div");
+    const divId = `page_${myIndex}`;
+    div.setAttribute("id", divId);
+    item.element = div;
+    div.innerHTML = item.paragraph;
+    content.appendChild(div);
+    observer.observe(div);
+  };
+
+  const addImage = () => {
+    const itemIMG = pages[myIndex];
+    const div2 = document.createElement("div");
+    const divId = `image_${myIndex}`;
+    div2.setAttribute("id", divId);
+    itemIMG.element = div2;
+    div2.innerHTML = itemIMG.image;
+    content.appendChild(div2);
+    observer.observe(div2);
+  };
+
+  getWriting();
+
+  //FORM
+
+  const getData = async () => {
+    const url = 'https://etbd.tech/hausmar2_455707/wdata/getjson.php?file=blank.json';
+    const response = await fetch(url);
+    const data = await response.json();
+    list = [...data];
+    showData();
+  }
+
+  const putData = async () => {
+    const url = 'https://etbd.tech/hausmar2_455707/wdata/putjson.php?file=blank.json';
+    const response = await fetch(url, {
+      method: "POST",
+      body: JSON.stringify(list),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        }
+    });
+    const responseText = await response.text();
+  }
+
+  const showData = () => {
+    commentsList.innerHTML = "";
+    list.forEach(item => {
+      commentsList.innerHTML += `Comment from ${item.username}: ${item.textfield}<br>`;
+    });
+}
+
+  getData();
+
+  //PAGES
+  document.addEventListener("click", function(event) {
+    if (event.target.id === 'evt') {
+        myIndex++;
+        myIndex = myIndex % pages.length;
+        event.target.id = "inactive";
+        addPage();
+        addImage();
+        k++;
+        setTimeout(() => {
+          window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
+        }, 100)
+
+        //HIDE SUN
+        if (k >= 4) {
+          document.querySelector(".img3").style.display = 'none';
+        }
+
+        //DISPLAY COMMENTS AT THE END, AFTER 0.5 SECONDS 
+        if (k >= 14) {
+          setTimeout(() => {
+            comments.classList.remove("hidden");
+          }, 500);
+        }
+    }
+  });
+
+  
+  //COMMENTS
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    username = username_input.value;
+    textfield = textfield_input.value;
+    list.push({"textfield": textfield, "username": username})
+    putData();
+    showData();
+    textfield_input.value = '';
+  });
+
+  //BLINKING TITLE
+  const stopGo = () => {
+    if (h1.style.animationPlayState !== 'paused') {
+      h1.style.animationPlayState = 'paused';
+    }
+    else if (event.target.id != 'inactive') {
+      h1.style.animationPlayState = 'running';
+    }
+  }
+
+  h1.addEventListener("click",stopGo);
+
+</script>
+
+</body>
+</html>
